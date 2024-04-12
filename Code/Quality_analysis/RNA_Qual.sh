@@ -9,16 +9,18 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
 
+cat $0
+
 module load bioinfo-tools FastQC
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data/
 
-cp SRCDIR/Raw_Data/RNA_untrimmed/RNA_untrimmed
-
-for i in `ls 
-cp $SRCDIR/Raw_Data/RNA_untrimmed/RNA_untrimmed/SRR4342137.1.fastq.gz $SNIC_TMP
+cp $SRCDIR/Raw_Data/RNA_untrimmed/RNA_untrimmed/$i.fastq.gz $SNIC_TMP
 cd $SNIC_TMP
 
-fastqc SRR4342137.1.fastq.gz
+for i in `ls SRCDIR/Quality_analysis_before_trimming`
+do
+fastqc $i.fastq.gz
 
-cp ./* $SRCDIR/Quality_analysis_before_trimming/SRR4342137.1
+cp ./${i}_.* $SRCDIR/Quality_analysis_before_trimming/${i}/
+done
