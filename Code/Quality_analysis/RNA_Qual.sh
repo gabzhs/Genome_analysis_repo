@@ -5,7 +5,7 @@
 #SBATCH -p core 
 #SBATCH -n 2
 #SBATCH -t 00:20:00
-#SBATCH -J Quality_analysis_test
+#SBATCH -J Quality_analysis_test_RNA
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
 
