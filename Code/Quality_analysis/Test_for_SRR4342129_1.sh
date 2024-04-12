@@ -11,10 +11,10 @@
 
 module load bioinfo-tools FastQC
 
-export SRCDIR=$HOME/Genome_analysis_repo/Data/Raw_Data/RNA_untrimmed/RNA_untrimmed
-cp $SRCDIR/SRR4342137.1.fastq.gz $SNIC_TMP
+export SRCDIR=$HOME/Genome_analysis_repo/
+cp $SRCDIR/Data/Raw_Data/RNA_untrimmed/RNA_untrimmed/SRR4342137.1.fastq.gz $SNIC_TMP
 cd $SNIC_TMP
 
 fastqc SRR4342137.1.fastq.gz
 
-cp ./* $SRCDIR/../../../Quality_analysis_before_trimming/SRR4342137.1
+cp ./* $SRCDIR/Data/Quality_analysis_before_trimming/SRR4342137.1
