@@ -22,5 +22,5 @@ for i in `ls $SRCDIR/Quality_analysis_before_trimming`
 do
 fastqc $i.fastq.gz
 
-cp ./${i}_.* $SRCDIR/Quality_analysis_before_trimming/${i}/
+cp ./${i}_* $SRCDIR/Quality_analysis_before_trimming/${i}/
 done
