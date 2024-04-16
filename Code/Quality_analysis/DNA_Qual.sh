@@ -5,7 +5,7 @@
 #SBATCH -p core 
 #SBATCH -n 2
 #SBATCH -t 00:20:00
-#SBATCH -J Quality_analysis_test_RNA
+#SBATCH -J Quality_analysis_test_DNA
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
 
@@ -15,12 +15,12 @@ module load bioinfo-tools FastQC
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
-cp $SRCDIR/Raw_Data/RNA_untrimmed/RNA_untrimmed/* $SNIC_TMP
+cp $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/* $SNIC_TMP
 cd $SNIC_TMP
 
 for i in `ls $SRCDIR/Quality_analysis_before_trimming`
 do
 fastqc $i.fastq.gz
 
-cp ./${i}_* $SRCDIR/Quality_analysis_before_trimming/${i}/
+cp ./${i}_* $SRCDIR/Quality_analysis_before_trimming/DNA/${i}/
 done
