@@ -20,7 +20,7 @@ cd $SNIC_TMP
 
 for i in `ls $SRCDIR/Quality_analysis_before_trimming/DNA`
 do
-fastqc $i.fastq.gz
+fastqc $i.paired.trimmed.fastq.gz
 
 cp ./${i}_* $SRCDIR/Quality_analysis_before_trimming/DNA/${i}/
 done
