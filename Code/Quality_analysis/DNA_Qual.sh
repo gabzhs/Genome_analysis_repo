@@ -17,11 +17,9 @@ export SRCDIR=$HOME/Genome_analysis_repo/Data
 cp $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/* $SNIC_TMP
 cd $SNIC_TMP
 
-gunzip *.gz
-
 for i in `ls $SRCDIR/Quality_analysis_before_trimming/DNA`
 do
-fastqc $i.paired.trimmed.fastq
+fastqc $i.paired.trimmed.fastq.gz
 
 cp ./${i}.paired.trimmed_* $SRCDIR/Quality_analysis_before_trimming/DNA/${i}/
 done
