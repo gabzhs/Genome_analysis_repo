@@ -23,5 +23,5 @@ for i in `ls $SRCDIR/Quality_analysis_before_trimming/DNA`
 do
 fastqc $i.paired.trimmed.fastq
 
-cp ./${i}_* $SRCDIR/Quality_analysis_before_trimming/DNA/${i}/
+cp ./${i}.paired.trimmed_* $SRCDIR/Quality_analysis_before_trimming/DNA/${i}/
 done
