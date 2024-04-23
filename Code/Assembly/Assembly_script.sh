@@ -15,4 +15,4 @@ module load bioinfo-tools megahit
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
-megahit -1 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_1.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_1.paired.trimmed.fastq.gz -2 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_2.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_2.paired.trimmed.fastq.gz -o $SRCDIR/Metagenome_assembly/Run_1
+megahit -1 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_1.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_1.paired.trimmed.fastq.gz -2 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_2.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_2.paired.trimmed.fastq.gz -o $SRCDIR/Metagenome_assembly/Run_1/
