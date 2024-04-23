@@ -15,12 +15,4 @@ module load bioinfo-tools megahit
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
-cp $SRCDIR/Raw_Data/RNA_untrimmed/RNA_untrimmed/* $SNIC_TMP
-cd $SNIC_TMP
-
-for i in `ls $SRCDIR/Quality_analysis_before_trimming/RNA`
-do
-fastqc $i.fastq.gz
-
-cp ./${i}_* $SRCDIR/Quality_analysis_before_trimming/RNA/${i}/
-done
+megahit -1 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_1.paired.trimmed.fastq.gz $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_1.paired.trimmed.fastq.gz -2 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_2.paired.trimmed.fastq.gz $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_2.paired.trimmed.fastq.gz -o $SRCDIR/Metagenome_assembly/Run_1
