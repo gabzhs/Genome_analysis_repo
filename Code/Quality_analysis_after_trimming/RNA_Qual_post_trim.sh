@@ -18,7 +18,7 @@ cd $SNIC_TMP
 
 for i in `ls $SRCDIR/Trimmed_RNA`
 do
-fastqc $i
+fastqc $SRCDIR/Trimmed_RNA/${i}
 
 done
 
