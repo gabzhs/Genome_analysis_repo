@@ -1,0 +1,5 @@
+In working directory: /home/gahe8576/Genome_analysis_repo/Data
+
+java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE -trimlog Trimlog_SRR4342137.txt /home/gahe8576/Genome_analysis_repo/Data/Raw_Data/RNA_untrimmed/RNA_untrimmed/SRR4342137.1.fastq.gz /home/gahe8576/Genome_analysis_repo/Data/Raw_Data/RNA_untrimmed/RNA_untrimmed/SRR4342137.2.fastq.gz -baseout SRR4342137.fastq.gz ILLUMINACLIP:$TRIMMOMATIC_ROOT/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:30
+
+java -jar $TRIMMOMATIC_ROOT/trimmomatic.jar PE -trimlog Trimlog_SRR4342139.txt /home/gahe8576/Genome_analysis_repo/Data/Raw_Data/RNA_untrimmed/RNA_untrimmed/SRR4342139.1.fastq.gz /home/gahe8576/Genome_analysis_repo/Data/Raw_Data/RNA_untrimmed/RNA_untrimmed/SRR4342139.2.fastq.gz -baseout SRR4342139.fastq.gz ILLUMINACLIP:$TRIMMOMATIC_ROOT/adapters/TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:30
