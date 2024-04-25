@@ -3,7 +3,7 @@
 #SBATCH -M snowy
 #SBATCH -p core 
 #SBATCH -n 4
-#SBATCH -t 16:00:00
+#SBATCH -t 08:00:00
 #SBATCH -J Metagenome_assembly
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
@@ -14,4 +14,4 @@ module load bioinfo-tools megahit
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
-megahit --kmin-1pass -1 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_1.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_1.paired.trimmed.fastq.gz -2 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_2.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_2.paired.trimmed.fastq.gz -o $SRCDIR/Metagenome_assembly/Run_4
+megahit --kmin-1pass -1 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_1.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_1.paired.trimmed.fastq.gz -2 $SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342129_2.paired.trimmed.fastq.gz,$SRCDIR/Raw_Data/DNA_trimmed/DNA_trimmed/SRR4342133_2.paired.trimmed.fastq.gz -o $SRCDIR/Metagenome_assembly/Run_5
