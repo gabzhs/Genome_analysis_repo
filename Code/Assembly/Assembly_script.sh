@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2024-2-7
 #SBATCH -M snowy
 #SBATCH -p core 
-#SBATCH -n 2
+#SBATCH -n 4
 #SBATCH -t 08:00:00
 #SBATCH -J Metagenome_assembly
 #SBATCH --mail-type=ALL
