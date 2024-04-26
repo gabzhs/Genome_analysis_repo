@@ -1,0 +1,1 @@
+python /sw/bioinfo/quast/5.0.2/snowy/bin/metaquast.py Metagenome_assembly/Run_6/final.contigs.fa -o Assembly_evaluation/Run_1/
