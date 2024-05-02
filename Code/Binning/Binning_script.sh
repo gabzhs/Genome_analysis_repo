@@ -14,4 +14,4 @@ module load bioinfo-tools MetaBat
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
-metabat -i SRCDIR/Metagenome_assembly/Run_6/final.contigs.fa -o SRCDIR/Bins/Run_1
+metabat -i $SRCDIR/Metagenome_assembly/Run_6/final.contigs.fa -o $SRCDIR/Bins/Run_1
