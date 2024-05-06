@@ -12,6 +12,6 @@ cat $0
 
 module load bioinfo-tools CheckM/1.1.3
 
-checkm data setRoot /home/gahe8576/Genome_analysis_repo/Data/Bin_evaluation/CheckM_data
+checkm data setRoot /home/gahe8576/Genome_analysis_repo/Data/Bin_evaluation/CheckM_data/2015_01_16
 
-checkm lineage_wf -t 16 -x fa --reduced_tree /home/gahe8576/Genome_analysis_repo/Data/Bins/Run_1 /home/gahe8576/Genome_analysis_repo/Data/Bin_evaluation/Run_1
+checkm lineage_wf -t 16 -x fa --reduced_tree /home/gahe8576/Genome_analysis_repo/Data/Bins/Run_1 /home/gahe8576/Genome_analysis_repo/Data/Bin_evaluation/Run_2
