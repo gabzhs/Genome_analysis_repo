@@ -8,7 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
 
-module load bioinfo-tools biopython FastTree muscle usearch/5.2.32 conda
+module load bioinfo-tools FastTree muscle usearch/5.2.32 conda
 
 export CONDA_ENVS_PATH=/proj/uppmax2024-2-7/Genome_Analysis/conda_envs
 source conda_init.sh
