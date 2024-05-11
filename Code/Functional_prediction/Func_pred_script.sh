@@ -12,8 +12,8 @@ module load bioinfo-tools prokka
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
-export INPUT=$SRCDIR/Data/Bins/Good_bins_run_1
-export OUTPUT=$SRCDIR/Data/Functional_prediction/Run_1_good_bins
+export INPUT=$SRCDIR/Bins/Good_bins_run_1
+export OUTPUT=$SRCDIR/Functional_prediction/Run_1_good_bins
 
 for i in `ls $INPUT/Bacteria`;
 do
