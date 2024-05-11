@@ -15,14 +15,14 @@ module load bioinfo-tools prokka
 export SRCDIR=$HOME/Genome_analysis_repo/Data
 
 export INPUT=$SRCDIR/Bins/Good_bins_run_1
-export OUTPUT=$SRCDIR/Functional_prediction/Run_1_good_bins
+export OUTPUT=$SRCDIR/Functional_prediction/Run_2_good_bins
 
 for i in `ls $INPUT/Bacteria`;
 do
-prokka --outdir $OUTPUT --prefix $i $INPUT/Bacteria/$i;
+prokka --outdir $OUTPUT/Bacteria --prefix $i $INPUT/Bacteria/$i --force;
 done
 
 for i in `ls $INPUT/Archaea`;
 do 
-prokka --kingdom Archaea --outdir $OUTPUT --prefix $i $INPUT/Archaea/$i;
+prokka --kingdom Archaea --outdir $OUTPUT/Bacteria --prefix $i $INPUT/Archaea/$i --force;
 done
