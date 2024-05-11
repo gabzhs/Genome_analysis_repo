@@ -10,8 +10,8 @@
 
 module load bioinfo-tools prokka
 
-INPUT = /home/gahe8576/Genome_analysis_repo/Data/Bins/Good_bins_run_1
-OUTPUT = /home/gahe8576/Genome_analysis_repo/Data/Functional_prediction/Run_1_good_bins
+INPUT = $HOME/Genome_analysis_repo/Data/Bins/Good_bins_run_1
+OUTPUT = $HOME/Genome_analysis_repo/Data/Functional_prediction/Run_1_good_bins
 
 for i in `ls $INPUT/Bacteria`;
 do
