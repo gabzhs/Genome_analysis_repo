@@ -8,6 +8,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
 
+cat $0
+
 module load bioinfo-tools prokka
 
 export SRCDIR=$HOME/Genome_analysis_repo/Data
