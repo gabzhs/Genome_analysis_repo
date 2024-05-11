@@ -13,3 +13,12 @@ module load bioinfo-tools prokka
 input = /home/gahe8576/Genome_analysis_repo/Data/Bins/Good_bins_run_1
 output = /home/gahe8576/Genome_analysis_repo/Data/Functional_prediction/Run_1_good_bins
 
+for i in `ls $input/Bacteria`;
+do
+prokka --outdir $output/Bacteria --prefix $i $i;
+done
+
+for i in `ls $input/Archaea`;
+do 
+prokka --kingdom Archaea --outdir $output/Archaea --prefix $i $i;
+done
