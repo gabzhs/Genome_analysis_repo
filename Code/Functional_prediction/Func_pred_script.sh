@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2024-2-7
 #SBATCH -M snowy
 #SBATCH -p core 
-#SBATCH -n 4
+#SBATCH -n 2
 #SBATCH -t 02:00:00
 #SBATCH -J Prediction_of_function
 #SBATCH --mail-type=ALL
@@ -17,10 +17,10 @@ export OUTPUT=$SRCDIR/Functional_prediction/Run_1_good_bins
 
 for i in `ls $INPUT/Bacteria`;
 do
-prokka --outdir $OUTPUT/Bacteria --prefix $i $i;
+prokka --outdir $OUTPUT --prefix $i $INPUT/Bacteria/$i;
 done
 
 for i in `ls $INPUT/Archaea`;
 do 
-prokka --kingdom Archaea --outdir $OUTPUT/Archaea --prefix $i $i;
+prokka --kingdom Archaea --outdir $OUTPUT --prefix $i $INPUT/Archaea/$i;
 done
