@@ -12,7 +12,15 @@ cat $0
 
 module load bioinfo-tools bwa
 
-export SRCDIR = /home/gahe8576/Genome_analysis_repo/Data
+export SRCDIR=/home/gahe8576/Genome_analysis_repo/Data
 
-for i in `ls $SRCDIR/Raw_Data/RNA_untrimmed/RNA_untrimmed`
+for i in `ls $SRCDIR/Bins/Best_bacterial_bins_run_1`
 do
+bwa mem -t 8 $i $SRCDIR/Trimmed_RNA/SRR4342137_1P.fastq.gz > $SRCDIR/Alignment/Run_1/$i.37_1P.sam;
+
+bwa mem	-t 8 $i $SRCDIR/Trimmed_RNA/SRR4342137_2P.fastq.gz > $SRCDIR/Alignment/Run_1/$i.37_2P.sam;
+
+bwa mem -t 8 $i $SRCDIR/Trimmed_RNA/SRR4342139_1P.fastq.gz > $SRCDIR/Alignment/Run_1/$i.39_1P.sam;
+
+bwa mem -t 8 $i $SRCDIR/Trimmed_RNA/SRR4342139_2P.fastq.gz > $SRCDIR/Alignment/Run_1/$i.39_2P.sam;
+done
