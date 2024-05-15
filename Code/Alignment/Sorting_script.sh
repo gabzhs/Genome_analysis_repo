@@ -18,5 +18,5 @@ cd $SRCDIR/Alignment/Run_1
 
 for i in `ls ./`
 do
-samtools sort $i -o ${i:0:11}.bam -I ${i:0:11}.fa;
+samtools sort $i -o ${i:0:11}.bam -I ${i:0:4};
 done
