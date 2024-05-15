@@ -18,5 +18,5 @@ cd $SRCDIR/Alignment/Run_1
 
 for i in `ls ./`
 do
-samtools sort $i -o ${i:0:11}.bam -I ${i:0:5};
+samtools sort $i -o ${i:0:11}.bam -I $SRCDIR/Bins/Best_bacterial_bins_run_1/${i:0:5};
 done
