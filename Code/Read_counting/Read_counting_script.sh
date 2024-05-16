@@ -3,7 +3,7 @@
 #SBATCH -M snowy
 #SBATCH -p core 
 #SBATCH -n 2
-#SBATCH -t 08:00:00
+#SBATCH -t 04:00:00
 #SBATCH -J Read_counting
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user gslottner@gmail.com
