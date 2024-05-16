@@ -18,6 +18,6 @@ cd $SRCDIR
 
 for i in `ls $SRCDIR/Bins/Best_bacterial_bins_run_1/*.fa`
 do
-htseq-count --bam --order pos $i.37.bam $i.gff > /Counted_reads/Run_1/$i.37_counts.txt
-htseq-count --bam --order pos $i.39.bam $i.gff > /Counted_reads/Run_1/$i.39_counts.txt
+htseq-count --format bam --order pos $SRCDIR/Alignment/Run_2/$i.37.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > /Counted_reads/Run_1/$i.37_counts.txt
+htseq-count --format bam --order pos $SRCDIR/Alignment/Run_2/$i.39.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > /Counted_reads/Run_1/$i.39_counts.txt
 done
