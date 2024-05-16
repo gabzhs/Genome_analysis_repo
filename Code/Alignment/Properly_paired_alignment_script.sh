@@ -18,7 +18,7 @@ cd $SRCDIR/Alignment
 
 for i in `ls $SRCDIR/Bins/Best_bacterial_bins_run_1`
 do
-bwa index $SRCDIR/Bins/Best_bacterial_bins_run_1/$i
+bwa index $SRCDIR/Bins/Best_bacterial_bins_run_1/$i;
 
 bwa mem -t 8 $SRCDIR/Bins/Best_bacterial_bins_run_1/$i $SRCDIR/Trimmed_RNA/SRR4342137_1P.fastq.gz $SRCDIR/Trimmed_RNA/SRR4342137_2P.fastq.gz > Run_2/$i.37.sam;
 
