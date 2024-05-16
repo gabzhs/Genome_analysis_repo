@@ -14,9 +14,9 @@ module load bioinfo-tools samtools
 
 export SRCDIR=/home/gahe8576/Genome_analysis_repo/Data
 
-cd $SRCDIR/Alignment/Run_1
+cd $SRCDIR/Alignment/Run_2
 
 for i in `ls ./`
 do
-samtools sort $i -o ${i:0:11}.bam -I $SRCDIR/Bins/Best_bacterial_bins_run_1/${i:0:5};
+samtools sort $i -o ${i:0:8}.bam -I $SRCDIR/Bins/Best_bacterial_bins_run_1/${i:0:5};
 done
