@@ -14,6 +14,10 @@ module load bioinfo-tools htseq
 
 export SRCDIR=/home/gahe8576/Genome_analysis_repo/Data
 
-cd $SRCDIR/Alignment
+cd $SRCDIR
 
-for i in `ls $SRCDIR/Bins/Best_bacterial_bins_run_1`
+for i in `ls $SRCDIR/Bins/Best_bacterial_bins_run_1/*.fa`
+do
+htseq-count --bam --order pos $i.37.bam $i.gff > /Counted_reads/Run_1/$i.37_counts.txt
+htseq-count --bam --order pos $i.39.bam $i.gff > /Counted_reads/Run_1/$i.39_counts.txt
+done
