@@ -18,6 +18,6 @@ cd $SRCDIR/Alignment/Run_2
 
 for i in 23.fa 25.fa 31.fa ;
 do
-htseq-count -t CDS --stranded=no --format bam --order pos $i.37.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_4/$i.37_counts.txt
-htseq-count -t CDS --stranded=no --format bam --order pos $i.39.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_4/$i.39_counts.txt
+htseq-count -i ID -t CDS --stranded=no --format bam --order pos $i.37.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_6/$i.37_counts.txt
+htseq-count -i ID -t CDS --stranded=no --format bam --order pos $i.39.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_6/$i.39_counts.txt
 done
