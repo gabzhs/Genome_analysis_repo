@@ -14,10 +14,10 @@ module load bioinfo-tools htseq
 
 export SRCDIR=/home/gahe8576/Genome_analysis_repo/Data
 
-cd $SRCDIR/Bins/Best_bacterial_bins_run_1/
+cd $SRCDIR/Alignment/Run_2
 
-for i in `ls *.fa`
+for i in 23.fa 25.fa 31.fa ;
 do
-htseq-count --stranded=no --format bam --order pos $SRCDIR/Alignment/Run_2/$i.37.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_3/$i.37_counts.txt
-htseq-count --stranded=no --format bam --order pos $SRCDIR/Alignment/Run_2/$i.39.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_3/$i.39_counts.txt
+htseq-count --stranded=no --format bam --order pos $i.37.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_4/$i.37_counts.txt
+htseq-count --stranded=no --format bam --order pos $i.39.bam $SRCDIR/Functional_prediction/Run_2_good_bins/Bacterial_features_without_nucleotides/$i.gff > $SRCDIR/Counted_reads/Run_4/$i.39_counts.txt
 done
