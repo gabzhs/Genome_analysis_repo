@@ -18,4 +18,4 @@ cd $HOME/Genome_analysis_repo/Data/Phylogenetic_prediction/Run_4/
 
 phylophlan_write_default_configs.sh
 
-phylophlan -i $HOME/Genome_analysis_repo/Data/Bins/Best_bacterial_bins_run_1 --genome_extension fa -o $HOME/Genome_analysis_repo/Data/Phylogenetic_prediction/Run_4/Phylophlan --nproc 4 -d phylophlan -f $HOME/Genome_analysis_repo/Data/Phylogenetic_prediction/Run_3/supermatrix_nt.cfg --diversity high
+phylophlan -i $HOME/Genome_analysis_repo/Data/Bins/Best_bacterial_bins_run_1 --genome_extension fa -o $HOME/Genome_analysis_repo/Data/Phylogenetic_prediction/Run_4/Phylophlan --nproc 4 -d phylophlan -f $HOME/Genome_analysis_repo/Data/Phylogenetic_prediction/Run_4/supermatrix_nt.cfg --diversity high
